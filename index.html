@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Server-sent event demo</title>
+</head>
+<body>
+<h1>Server-sent event demo</h1>
+<h2>F12 abrir la consola para ver las salidas</h2>
+<script type="text/javascript">
+	if ("EventSource" in window) {
+		let messenger = new EventSource("/eventos");
+
+		["open", "message", "close", "error", "evento"].forEach(function (eventName) {
+			messenger.addEventListener(eventName, function (e) {
+				console.log(eventName, e);
+			}, false);
+		});
+	} else {
+		log("EventSource no disponible :(");
+	}
+</script>
+</body>
+</html>
