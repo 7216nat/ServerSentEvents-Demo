@@ -25,7 +25,7 @@ Demo para mostrar el funcionamiento de SSE y su implementación mediante javascr
 ### Instalación
 
 ```
-git clone 
+git clone https://github.com/7216nat/ServerSentEvents-Demo.git
 ```
 
 ## Uso <a name = "uso"></a>
@@ -35,8 +35,12 @@ git clone
 >> cd /ruta/del/proyecto
 
 >> node server.js
+
+Abrir el navegador y acceder a la http://localhost:8083
+
+F12 para ver los logs por la consola
 ```
-Abrir el navegador y acceder a la http://localhost:8083, y F12 para ver los logs por la consola
+
 
 
 
