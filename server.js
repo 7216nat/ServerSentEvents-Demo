@@ -49,10 +49,12 @@ let handleSSE = function (res) {
   scheduleEvent(res);
 };
 
+let id = 0;
+
 let emitRandomEvent = function (res) {
   let eventMsg = Math.random() < 0.5,
     data = (new Date()).toISOString();
-  res.write("id: " + data + "\n");
+  id = id +1;
   if (eventMsg) {
     res.write("event: evento\n");
   }
