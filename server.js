@@ -55,6 +55,7 @@ let emitRandomEvent = function (res) {
   let eventMsg = Math.random() < 0.5,
     data = (new Date()).toISOString();
   id = id +1;
+  res.write("id: " + id + "\n");
   if (eventMsg) {
     res.write("event: evento\n");
   }
